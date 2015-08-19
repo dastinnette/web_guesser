@@ -2,7 +2,19 @@
   <h3>
     <b>Can you guess the SECRET NUMBER???</b>
     <style>
-      body {background: red;}
+      body {
+        <% if message == "Way too high!" %>
+          background: red;
+        <% elsif message == "Way too low!" %>
+          background: red;
+        <% elsif message == "Too low!" %>
+          background: hotpink;
+        <% elsif message == "Too high!" %>
+          background: hotpink;
+        <% else %>
+          background: green;
+        <%end%>
+      }
     </style>
   </h3>
   <body>
